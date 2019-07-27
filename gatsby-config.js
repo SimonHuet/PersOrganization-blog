@@ -1,9 +1,17 @@
-/**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.org/docs/gatsby-config/
- */
-
 module.exports = {
-  /* Your site config here */
+  siteMetadata : {
+    title: 'Organization  blog',
+    description: ' Personnal organizator\'s blog '
+  },
+  plugins : [
+    'gatsby-tranformer-remark',
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'pages',
+        path: '${__dirname/src/md_pages}'
+      }
+    }
+  ]
+
 }
