@@ -4,6 +4,7 @@ import { Link, graphql } from 'gatsby'
 
 
 const Layout = ({ data }) => {
+    console.log(data)
     const { edges } = data.allMarkdownRemark
     const styles = {
         display: 'flex',
