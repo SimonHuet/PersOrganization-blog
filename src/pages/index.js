@@ -4,7 +4,6 @@ import { Link, graphql } from 'gatsby'
 
 
 const Layout = ({ data }) => {
-    console.log(data)
     const { edges } = data.allMarkdownRemark
     const styles = {
         display: 'flex',
@@ -39,7 +38,7 @@ const Layout = ({ data }) => {
 export const query = graphql`
     query HomepageQuery {
         allMarkdownRemark(
-            sort: { order :DESC ,fields : [frontmatter___date]}
+            sort: { order :ASC ,fields : [frontmatter___date]}
             ){
             edges{
                 node{
