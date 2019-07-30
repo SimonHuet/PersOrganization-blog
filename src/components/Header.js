@@ -1,9 +1,10 @@
 import React from 'react'
-import {StaticQuery , graphql } from 'gatsby'
+import { StaticQuery, graphql } from 'gatsby'
 import TitleAndDescription from './TitleAndDescription'
 
-const Header = () => <StaticQuery 
-                        query={graphql`query {
+const Header = () => 
+    <StaticQuery
+        query={graphql`query {
                         site{
                             siteMetadata{
                                 title
@@ -11,7 +12,7 @@ const Header = () => <StaticQuery
                             }
                         }
                     }`}
-                render={data => <TitleAndDescription data={data} />}
-                />
-
+        render={data => <TitleAndDescription data={data} />}
+    />
+    
 export default Header
